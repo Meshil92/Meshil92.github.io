@@ -385,15 +385,16 @@ var resizePizzas = function(size) {
 
   // Changes the value for the size of the pizza above the slider
   function changeSliderLabel(size) {
+    var sizePizza = document.getElementById("pizzaSize");
     switch(size) {
       case "1":
-        document.querySelector("#pizzaSize").innerHTML = "Small";
+        sizePizza.innerHTML = "Small";
         return;
       case "2":
-        document.querySelector("#pizzaSize").innerHTML = "Medium";
+        sizePizza.innerHTML = "Medium";
         return;
       case "3":
-        document.querySelector("#pizzaSize").innerHTML = "Large";
+        sizePizza.innerHTML = "Large";
         return;
       default:
         console.log("bug in changeSliderLabel");
@@ -508,7 +509,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
   var elem;
-  var movingPizzas = document.querySelector("#movingPizzas1");
+  var movingPizzas = document.getElementById("movingPizzas1");
 
   for (var i = 0; i < 50; i++) {
     elem = document.createElement('img');
